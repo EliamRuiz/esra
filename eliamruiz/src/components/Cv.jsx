@@ -9,8 +9,8 @@ const Cv = () => {
     //   }, [])
 
     return (
-        <div className="h-full vh-100">
-            <iframe className="aspect-auto" src="./CV_SWE.pdf" style={{ color: "red", fontSize: "20px" }}></iframe>
+        <div className="w-screen h-screen">
+            <iframe className="w-full h-full" src="./CV_SWE.pdf"></iframe>
         </div>
     )
 }

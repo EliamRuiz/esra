@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
 import Timeline from "./components/Timeline"
 import expRaw from "../src/experiences.json"
-import { NavLink, Link } from "react-router";
 
 function App() {
   const [data, setData] = useState([]);

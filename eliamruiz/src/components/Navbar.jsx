@@ -1,3 +1,5 @@
+import { NavLink, Link } from "react-router";
+
 const Navbar = () => {
 
     return (
@@ -8,10 +10,10 @@ const Navbar = () => {
         </div>
         <div className="px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-end">
-                <a href="/" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block w-35">Home</a>
-                <a href="/projects" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block w-35">Projects</a>
-                <a href="/cv" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block w-35">CV</a>
-                <a href="/contact" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block w-35">Contact Me</a>
+                <Link to ="/" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block ">Home</Link>
+                {/* <Link to ="/project" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block ">Projects</Link> */}
+                <Link to="/cv" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block">CV</Link>
+                <Link to ="/contact" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block ">Contact Me</Link>
             </div>
         </div>
     </nav>
