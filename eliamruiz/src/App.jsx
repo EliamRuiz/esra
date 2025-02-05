@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Timeline from "./components/Timeline"
 import expRaw from "../src/experiences.json"
+import { NavLink, Link } from "react-router";
 
 function App() {
   const [data, setData] = useState([]);
@@ -14,7 +15,6 @@ function App() {
   return (
 
     <div className='bg-slate-300'>
-      <Navbar />
 
       <div className='flex h-lvh justify-center items-center'>
         <div className="flex bg-white p-6 shadow-lg rounded-xl w-10/12 content-center">
@@ -39,7 +39,6 @@ function App() {
                   ))}
               </ol>
          </div>
-      <Footer />
     </div>
 
   );

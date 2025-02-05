@@ -2,6 +2,7 @@ import {useIsVisible} from "../useIsVisible"
 import { useRef } from 'react'
 
 const Timeline = ( {exp} ) => {
+    
 const skills = exp.skills
 const ref1 = useRef();
 const isVisible1 = useIsVisible(ref1);
