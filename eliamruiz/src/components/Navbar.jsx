@@ -6,7 +6,9 @@ const Navbar = () => {
     
     <nav className="bg-gray-800 flex justify-between px-3 py-2 items-center">
         <div className="">
+            <Link  to ="/">
             <h1 className="text-white text-center px-3 py-2 rounded-md block w-40 hover:text-teal-600">Eliam Ruiz Agosto</h1>
+            </Link>
         </div>
         <div className="px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-end">
