@@ -8,7 +8,7 @@ const Cv = () => {
     //     setData(cvRaw)
     //   }, [])
 
-    return (
+    return (          
         <div className="w-screen h-screen">
             <iframe className="w-full h-full" src="./CV_SWE.pdf"></iframe>
         </div>
