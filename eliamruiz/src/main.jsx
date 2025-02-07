@@ -3,7 +3,7 @@ import './index.css'
 import App from './App.jsx'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import Cv_page from './pages/Cv_page.jsx'
 import Contact from './pages/Contact_page.jsx'
 
@@ -17,7 +17,7 @@ const Layout = () =>{
     )
 }
 
-const router = createBrowserRouter([{
+const router = createHashRouter([{
     path: '/',
     element:<Layout/>,
     children: [

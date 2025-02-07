@@ -72,7 +72,7 @@ const Contact = () => {
                     <button 
                         type="submit" 
                         disabled={state.submitting} 
-                        className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:text-teal-600 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                        className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-teal-600 sm:w-fit hover:text-teal-600 hover:bg-white focus:ring-4 focus:outline-none focus:ring-primary-300"
                     >
                         Send message
                     </button>
