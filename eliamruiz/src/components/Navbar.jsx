@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link to="/" onClick={closeMenu}>
           <div className="flex items-center">
             <img
-              src="../public/logoE.jpeg"
+              src="/logoE.jpeg"
               alt="E Icon"
               className="h-6 w-6 object-cover rounded-full"
             />
