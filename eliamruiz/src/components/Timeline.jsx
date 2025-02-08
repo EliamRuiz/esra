@@ -15,7 +15,7 @@ const Timeline = ({ exp }) => {
             <h3 className="text-base sm:text-lg font-semibold text-gray-700">{exp.job}</h3>
             <p className="text-sm sm:text-base font-normal text-gray-400">{exp.date}</p>
             <span className="bg-teal-600 text-blue-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded">{exp.class}</span>
-            <p className="text-sm sm:text-base font-normal text-gray-600">{exp.description}</p>
+            <p className="text-sm sm:text-base font-normal text-gray-600 text-justify">{exp.description}</p>
             <h4 className="text-base sm:text-lg font-semibold text-gray-700">Skills:</h4>
             <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (

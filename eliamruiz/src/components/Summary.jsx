@@ -1,10 +1,26 @@
-import React from 'react';
+import React from "react";
+import { useEffect, useState } from "react";
 
 export default function Summary() {
+  const [languages, setLanguages] = useState([]);
+  const [frameworks, setFrameworks] = useState([]);
+
+  useEffect(() => {
+    fetch("/languages.json")
+      .then((res) => res.json())
+      .then((data) => setLanguages(data.languages));
+  }, []);
+
+  useEffect(() => {
+    fetch("/frameworks.json")
+      .then((res) => res.json())
+      .then((data) => setFrameworks(data.frameworks));
+  }, []);
+
   return (
     <div>
       <div className="flex h-auto md:h-lvh justify-center items-center p-6">
-        <div className="flex flex-col md:flex-col lg:flex-row bg-white p-6 shadow-lg rounded-xl w-full sm:6/12 md:w-8/12 lg:w-10/12 content-center">
+        <div className="flex flex-col md:flex-col lg:flex-row bg-white p-6 shadow-lg rounded-xl sm:6/12 md:w-10/12 lg:max-w-[2000px] content-center">
           <div className="flex justify-center">
             <img
               className="h-40 w-40 md:h-60 md:w-60 lg:h-auto lg:w-auto object-cover shadow-xl rounded-xl"
@@ -16,7 +32,7 @@ export default function Summary() {
             <h1 className="mb-2 text-xl md:text-2xl font-bold text-gray-600">
               Eliam Ruiz Agosto
             </h1>
-            <p className="text-sm font-normal text-gray-700">
+            <p className="text-sm font-normal text-gray-700 pb-5 border-b-4 border-teal-600 border-opacity-20 text-justify">
               I am a Software Engineer with experience in PHP, Laravel,
               JavaScript, Python, and automated testing. I have worked in
               full-stack development, API integrations, and QA automation. I
@@ -26,11 +42,37 @@ export default function Summary() {
               software optimization, and delivering high-quality solutions.
               Bilingual in English and Spanish.
             </p>
+            <h2 className="mt-5 text-xl md:text-2xl font-bold text-gray-600 pb-3">
+              Progrmaming Laguanges I've used
+            </h2>
+            <div className="border-b-4 border-teal-600 border-opacity-20 pb-5">
+              {languages.map((laguage, index) => (
+                 <span className="inline-flex items-center justify-center w-15 h-15 me-2 bg-teal-50 rounded-full m-3">
+                 <img
+                   src={"/" + laguage}
+                   alt="Icon" 
+                   className="w-12 h-12 rounded-full"
+                 />
+               </span>
+              ))}
+            </div>
+            <h3 className="mt-5 text-xl md:text-2xl font-bold text-gray-600">
+              Framewoks & Tools I've used
+            </h3>
+            <div className="border-b-4 border-teal-600 border-opacity-20 pb-5">
+              {frameworks.map((framework, index) => (
+                 <span className="inline-flex items-center justify-center w-15 h-15 me-2 bg-teal-50 rounded-full m-3">
+                 <img
+                   src={"/" + framework}
+                   alt="Icon" 
+                   className="w-12 h-12 rounded-full"
+                 />
+               </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-
