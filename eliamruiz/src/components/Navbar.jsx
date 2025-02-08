@@ -1,25 +1,80 @@
-import { NavLink, Link } from "react-router";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false); // State to control menu visibility
+  // Function to close menu when a link is clicked
+  const closeMenu = () => setIsOpen(false);
 
-    return (
-    
-    <nav className="bg-gray-800 flex justify-between px-3 py-2 items-center">
-        <div className="">
-            <Link  to ="/">
-            <h1 className="text-white text-center px-3 py-2 rounded-md block w-40 hover:text-teal-600">Eliam Ruiz Agosto</h1>
-            </Link>
+  return (
+    <nav className="bg-gray-800 px-3 py-2">
+      <div className="flex justify-between items-center">
+        {/* Logo */}
+        <Link to="/" onClick={closeMenu}>
+          <h1 className="text-white text-center px-3 py-2 rounded-md hover:text-teal-600">
+            Eliam Ruiz Agosto
+          </h1>
+        </Link>
+
+        {/* Hamburger Menu Button (Visible on Small Screens) */}
+        <button
+          className="text-white sm:hidden block focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? "✖" : "☰"} {/* Changes icon based on isOpen state */}
+        </button>
+
+        {/* Desktop Menu (Visible on Large Screens) */}
+        <div className="hidden sm:flex space-x-4">
+          <Link
+            to="/"
+            className="text-white hover:bg-teal-600 px-3 py-2 rounded-md"
+          >
+            Home
+          </Link>
+          <Link
+            to="/cv"
+            className="text-white hover:bg-teal-600 px-3 py-2 rounded-md"
+          >
+            CV
+          </Link>
+          <Link
+            to="/contact"
+            className="text-white hover:bg-teal-600 px-3 py-2 rounded-md"
+          >
+            Contact Me
+          </Link>
         </div>
-        <div className="px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-end">
-                <Link to ="/" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block ">Home</Link>
-                {/* <Link to ="/project" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block ">Projects</Link> */}
-                <Link to="/cv" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block">CV</Link>
-                <Link to ="/contact" className="text-white text-center hover:bg-teal-600 px-3 py-2 rounded-md block ">Contact Me</Link>
-            </div>
+      </div>
+
+      {/* Mobile Menu (Shows Only When isOpen is True) */}
+      {isOpen && (
+        <div className="sm:hidden mt-2 space-y-2">
+          <Link
+            to="/"
+            className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
+            onClick={closeMenu}
+          >
+            Home
+          </Link>
+          <Link
+            to="/cv"
+            className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
+            onClick={closeMenu}
+          >
+            CV
+          </Link>
+          <Link
+            to="/contact"
+            className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
+            onClick={closeMenu}
+          >
+            Contact Me
+          </Link>
         </div>
+      )}
     </nav>
-    )
-}
+  );
+};
 
 export default Navbar;
