@@ -11,9 +11,16 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link to="/" onClick={closeMenu}>
-          <h1 className="text-white text-center px-3 py-2 rounded-md hover:text-teal-600">
-            Eliam Ruiz Agosto
-          </h1>
+          <div className="flex items-center">
+            <img
+              src="../public/logoE.jpeg"
+              alt="E Icon"
+              className="h-6 w-6 object-cover rounded-full"
+            />
+            <h1 className="text-white text-center px-3 py-2 rounded-md hover:text-teal-600">
+              Eliam Ruiz Agosto
+            </h1>
+          </div>
         </Link>
 
         {/* Hamburger Menu Button (Visible on Small Screens) */}
