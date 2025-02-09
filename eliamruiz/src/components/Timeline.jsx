@@ -14,12 +14,12 @@ const Timeline = ({ exp }) => {
             <p className="mb-1 text-xs sm:text-sm font-normal leading-none text-gray-900">{exp.name}</p>
             <h3 className="text-base sm:text-lg font-semibold text-gray-700">{exp.job}</h3>
             <p className="text-sm sm:text-base font-normal text-gray-400">{exp.date}</p>
-            <span className="bg-teal-600 text-blue-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded">{exp.class}</span>
-            <p className="text-sm sm:text-base font-normal text-gray-600 text-justify">{exp.description}</p>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-700">Skills:</h4>
+            <span className="bg-teal-600 text-blue-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-1">{exp.class}</span>
+            <p className="text-sm sm:text-base font-normal text-gray-600 text-justify mt-2">{exp.description}</p>
+            <h4 className="text-base sm:text-lg font-semibold text-gray-700 mt-2">Skills:</h4>
             <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
-                <span key={index} className="bg-gray-600 text-blue-100 text-xs font-medium px-3 py-1 rounded" >{skill}</span>
+                <span key={index} className="bg-gray-600 text-blue-100 text-xs font-medium px-3 py-1 rounded m-1" >{skill}</span>
             ))}
             </div>
       </li>

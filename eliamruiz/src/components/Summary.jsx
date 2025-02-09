@@ -19,8 +19,8 @@ export default function Summary() {
 
   return (
     <div>
-      <div className="flex h-auto md:h-lvh justify-center items-center p-6">
-        <div className="flex flex-col md:flex-col lg:flex-row bg-white p-6 shadow-lg rounded-xl sm:6/12 md:w-10/12 lg:max-w-[2000px] content-center">
+      <div className="flex min-h-screen justify-center items-center p-6 pt-20">
+        <div className="relative z-10 flex flex-col md:flex-col lg:flex-row bg-white p-6 shadow-lg rounded-xl sm:w-6/12 md:w-10/12 lg:max-w-[2000px] content-center">
           <div className="flex justify-center">
             <img
               className="h-40 w-40 md:h-60 md:w-60 lg:h-auto lg:w-auto object-cover shadow-xl rounded-xl"
@@ -47,13 +47,13 @@ export default function Summary() {
             </h2>
             <div className="border-b-4 border-teal-600 border-opacity-20 pb-5">
               {languages.map((laguage, index) => (
-                 <span className="inline-flex items-center justify-center w-15 h-15 me-2 bg-teal-50 rounded-full m-3">
-                 <img
-                   src={"/" + laguage}
-                   alt="Icon" 
-                   className="w-12 h-12 rounded-full"
-                 />
-               </span>
+                <span className="inline-flex items-center justify-center w-15 h-15 me-2 rounded-lg m-3">
+                  <img
+                    src={"/" + laguage}
+                    alt="Icon"
+                    className="w-12 h-12 rounded-lg"
+                  />
+                </span>
               ))}
             </div>
             <h3 className="mt-5 text-xl md:text-2xl font-bold text-gray-600">
@@ -61,13 +61,13 @@ export default function Summary() {
             </h3>
             <div className="border-b-4 border-teal-600 border-opacity-20 pb-5">
               {frameworks.map((framework, index) => (
-                 <span className="inline-flex items-center justify-center w-15 h-15 me-2 bg-teal-50 rounded-full m-3">
-                 <img
-                   src={"/" + framework}
-                   alt="Icon" 
-                   className="w-12 h-12 rounded-full"
-                 />
-               </span>
+                <span className="inline-flex items-center justify-center w-15 h-15 me-2 rounded-lg m-3">
+                  <img
+                    src={"/" + framework}
+                    alt="Icon"
+                    className="w-12 h-12 rounded-lg"
+                  />
+                </span>
               ))}
             </div>
           </div>

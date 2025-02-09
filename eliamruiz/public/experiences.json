@@ -12,14 +12,14 @@
     },
     {
       "id": 2,
-      "name": "Software Engineer Trainee",
+      "name": "Jr. Software Engineer",
       "location": "Rio Piedras Puerto Rico",
       "company": "University of Puerto Rico",
       "job": "Full Stack Developer",
       "date": "Jan 2023 - Jun 2023 ·",
       "class": "Part-Time",
       "skills": ["Computer Science", "Laravel" , "PHP", "Docker", "Bootstrap", "HTML", "Javascript", "MVC"],
-      "description": "I worked in the creation of a web application for a Puerto Rico municipality. The goal is to digitalize the project auction process so that companies can bid more easily through one platform. This system will help the transparency and efficiency of the current system. We are using PHP with Laravel 9, MYSQL, HTML5, Bootstrap 5 and JavaScript to build this app.  I am currently working with both backend and frontend. We use Docker to manage our server environments and follow the MVC design pattern."
+      "description": "I worked in the creation of a web application for a Puerto Rico municipality. The goal is to digitalize the project auction process so that companies can bid more easily through one platform. This system will help the transparency and efficiency of the current system. We are using PHP with Laravel 9, MYSQL, HTML5, Bootstrap 5 and JavaScript to build this app.  I am developed both backend and frontend tasks. We used Docker to manage our server environments and the project followed MVC design pattern."
     },
     {
       "id": 3,

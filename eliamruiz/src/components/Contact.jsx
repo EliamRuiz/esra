@@ -20,15 +20,15 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-slate-300 dark:bg-slate-300 w-screen h-screen flex justify-center items-center">
-      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-screen-md">
+    <section className="bg-slate-300 w-screen min-h-screen flex justify-center items-center pt-20">
+      <div className="relative z-10 bg-white shadow-lg rounded-xl p-8 w-full max-w-screen-md mb-20">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
           Contact Me
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
           Feel free to contact me for job opportunities
         </p>
-        <form onSubmit={handleFormSubmit} className="space-y-8">
+        <form onSubmit={handleFormSubmit} className="space-y-8 ">
           <div>
             <label
               htmlFor="email"
