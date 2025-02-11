@@ -70,6 +70,15 @@ export default function Summary() {
                 </span>
               ))}
             </div>
+            <div className="flex mt-6 justify-center md:justify-center lg:justify-start">
+              <a
+                href="./CV_SWE.pdf"
+                download="EliamRuiz_CV.pdf"
+                className="px-4 py-2 bg-teal-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition duration-300"
+              >
+                📄 Download CV
+              </a>
+            </div>
           </div>
         </div>
       </div>
