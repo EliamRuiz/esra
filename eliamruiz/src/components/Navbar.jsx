@@ -58,13 +58,13 @@ const Navbar = () => {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             to="/cv"
             className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
             onClick={closeMenu}
           >
             CV
-          </Link>
+          </Link> */}
           <Link
             to="/contact"
             className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
