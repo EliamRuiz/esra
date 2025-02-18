@@ -3,14 +3,13 @@ import "./index.css";
 import App from "./App.jsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import About from "./pages/About_page.jsx";
+import Contact from "./pages/Contact_page.jsx";
 import {
   Outlet,
   RouterProvider,
-  createBrowserRouter,
   createHashRouter,
 } from "react-router-dom";
-import Cv_page from "./pages/Cv_page.jsx";
-import Contact from "./pages/Contact_page.jsx";
 
 const Layout = () => {
   return (
@@ -31,10 +30,10 @@ const router = createHashRouter([
         path: "/",
         element: <App />,
       },
-      // {
-      //     path: '/cv',
-      //     element: <Cv_page/>
-      // },
+      {
+          path: '/about',
+          element: <About/>
+      },
       {
         path: "/contact",
         element: <Contact />,

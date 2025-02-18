@@ -40,6 +40,12 @@ const Navbar = () => {
             Home
           </Link>
           <Link
+            to="/about"
+            className="text-white hover:bg-teal-600 px-3 py-2 rounded-md"
+          >
+            About Me
+          </Link>
+          <Link
             to="/contact"
             className="text-white hover:bg-teal-600 px-3 py-2 rounded-md"
           >
@@ -58,13 +64,13 @@ const Navbar = () => {
           >
             Home
           </Link>
-          {/* <Link
-            to="/cv"
+          <Link
+            to="/about"
             className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
             onClick={closeMenu}
           >
-            CV
-          </Link> */}
+            About Me
+          </Link>
           <Link
             to="/contact"
             className="block text-white text-center bg-gray-700 px-3 py-2 rounded-md"
