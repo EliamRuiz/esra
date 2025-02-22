@@ -25,7 +25,7 @@ const Navbar = () => {
 
         {/* Hamburger Menu Button (Visible on Small Screens) */}
         <button
-          className="text-white text-5xl sm:hidden block focus:outline-none"
+          className="text-white text-4xl sm:hidden block focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✖" : "☰"} {/* Changes icon based on isOpen state */}

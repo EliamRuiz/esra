@@ -1,4 +1,4 @@
-import Contact from "../components/Contact"
+import AboutMe from "../components/AboutMe"
 
 function About() {
 
@@ -6,7 +6,7 @@ function About() {
 
 
         <div className='bg-slate-300'>
-             <Contact />
+             <AboutMe />
         </div>
 
   );
